@@ -1,0 +1,20 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+}
+
+const { href, title, body } = Astro.props;
+---
+
+<div class="col-6 col-sm-4 col-md-3 p-2">
+	<div class="card animation-selected">
+		<a href={href} class="text-decoration-none">
+			<div class="card-body lh-1">
+				<i class:list={["mb-5", body]}></i>
+				<h6 class="card-title">{title}</h6>
+			</div>
+		</a>
+	</div>
+</div>
